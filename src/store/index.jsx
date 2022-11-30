@@ -32,10 +32,26 @@ const initState = {
 
 
 
-const reducer = (state = initState,action) => {
-return state
+const reduser = (state = initState, action) => {
+  switch (action.type) {
+      case "ADD_ACCOUNT":
+          // console.log(action.payload);
+          return {
+          
+              accounts: [...state.accounts, action.payload],
+              numberOfAccounts: state.numberOfAccounts + 1,
+          };
+      case "REMOVE_ACCOUNT":
+          return {
+              ...state,
+              accounts: action.payload,
+              numberOfAccounts: state.numberOfAccounts - 1,
+          };
+      default:
+          return state;
+  }
 }
 
+const store = createStore(reduser)
 
-const store = createStore(reducer)
-export default store
+export default store; 

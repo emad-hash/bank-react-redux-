@@ -3,9 +3,9 @@ import '../App.css'
 
 function Footer() {
     return (
-        <footer class="text-center text-white mt-auto">
+        <footer className="text-center text-white mt-auto">
            
-            <div class="footer">
+            <div className="footer">
                 <h5 >
                 © 2022 Copyrigh :emadhashsah
                 </h5>
